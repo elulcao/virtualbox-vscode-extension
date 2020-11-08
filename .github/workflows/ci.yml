@@ -20,5 +20,5 @@ jobs:
         with:
           node-version: 10.x
       - run: yarn install
-      - run: xvfb-run -a yarn run compile
+      - run: yarn run compile
       - run: yarn test
