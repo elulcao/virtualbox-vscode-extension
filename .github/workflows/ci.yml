@@ -19,8 +19,6 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 10.x
-      - run: npm install
+      - run: yarn install
       - run: xvfb-run -a yarn run compile
-        if: runner.os == 'Linux'
       - run: yarn test
-        if: runner.os != 'Linux'
