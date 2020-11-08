@@ -20,7 +20,7 @@ jobs:
         with:
           node-version: 10.x
       - run: npm install
-      - run: xvfb-run -a npm test
+      - run: xvfb-run -a yarn run compile
         if: runner.os == 'Linux'
-      - run: npm test
+      - run: yarn test
         if: runner.os != 'Linux'
